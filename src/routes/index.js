@@ -5,7 +5,6 @@ function initExpressRoutes(app) {
      * Reference: https://expressjs.com/en/guide/routing.html 
      */
     app.get("/ping", pingController);
-
     // Add more routes here
 }
 
