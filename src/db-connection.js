@@ -1,5 +1,8 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
+/**
+ * Documentation link: https://www.mongodb.com/languages/javascript/mongodb-and-npm-tutorial
+ */
 async function createDatabaseConnection(mongoDatabaseURL, logger) {
     try {
         logger.info("Attempting to connect to database...")

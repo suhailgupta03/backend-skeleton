@@ -21,7 +21,7 @@ async function init() {
     }
     const client = await createDatabaseConnection(uri, logger);
     const app = express();
-    initExpressRoutes(app);
+    initExpressRoutes(app, client, logger);
     app.listen(3000, () => {
         logger.info("Server is listening on port 3000");
     })
