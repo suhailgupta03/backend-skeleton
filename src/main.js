@@ -13,17 +13,21 @@ const {logger} = require("./logger");
 const {createDatabaseConnection} = require("./db-connection");
 
 const uri = process.env.MONGODB_URI;
-
+const port = process.env.SERVER_PORT;
 
 async function init() {
     if(!uri) {
         throw new Error("MONGODB_URI environment variable is not set!");
     }
+
+    if(!port) {
+        throw new Error("SERVER_PORT environment variable is not set!");
+    }
     const client = await createDatabaseConnection(uri, logger);
     const app = express();
     initExpressRoutes(app, client, logger);
-    app.listen(3000, () => {
-        logger.info("Server is listening on port 3000");
+    app.listen(port, () => {
+        logger.info(`Server is listening on port ${port}`);
     })
 }
 
