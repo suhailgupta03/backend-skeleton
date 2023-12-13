@@ -4,6 +4,12 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import QRCode from "qrcode.react";
 import "./PaymentForm.css"; // Importing our custom CSS
 
+/**
+ * Card Number:    4242 4242 4242 4242
+    Expiration Date: 12 / 34
+    CVC:             123
+    ZIP:             90210
+ */
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
