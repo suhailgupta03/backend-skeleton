@@ -1,0 +1,90 @@
+/* PaymentForm.css */
+.payment-form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .amount-input,
+  .card-element {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .qr-code {
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .submit-btn {
+    background-color: #00adee;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0079aa;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Styling for radio buttons */
+  .form-row label input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* Error message styling */
+  .card-errors {
+    color: #fa755a;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+  
+  /* Placeholder color customization for CardElement */
+  .StripeElement--empty::placeholder {
+    color: #aab7c4;
+  }
+  
+  /* When the CardElement has focus, change the border color */
+  .StripeElement--focus {
+    border-color: #80bdff;
+  }
+  
+  /* Style the CardElement when it has input */
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+  
